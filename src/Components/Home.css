@@ -1,0 +1,173 @@
+.main-conatiner{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 95vh;
+    background-color: #feca33;
+    padding-top: 100px;
+    width: 100%;   
+}
+
+
+.booking-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    padding-top: 40px;
+    margin-left: 5px;
+    width: 350px;
+    height: 350px;
+    background-color:  #fffefe;
+    box-shadow: 0 8px 16px black;
+}
+
+.image{
+    width: 600px;
+    height: 400px;
+}
+
+#carImg{
+    width: 100%;
+    height: 78%;
+}
+.Text{
+    margin-top: -20px;
+    margin-bottom: 10px;
+}
+
+.carBookForm select{
+    font-weight: bold;
+    font-size: large;
+    height: 40px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.pick-upLocation {
+    padding: 2px 0px;
+    border:1px solid gray;
+    height: 30px;
+    width: 100%;
+    font-weight: bold;
+    font-size: medium;
+    background-color: rgb(208, 207, 207);
+    margin-bottom: 20px;
+}
+
+.pick-upLocation label{   
+    padding-right: 20px;
+    line-height: 20px;
+}
+
+.pick-upLocation input{
+    padding-left: 5px;
+    padding-top: 4px;
+    padding-right: 16px;
+}
+
+.pick-upDate{
+    padding: 2px 0px;
+    border:1px solid gray;
+    height: 30px;
+    width: 100%;
+    font-weight: bold;
+    font-size: medium;
+    background-color: rgb(208, 207, 207);
+    margin-bottom: 20px;
+}
+
+.pick-upDate label{
+    padding-right: 30px;
+    line-height: 20px;
+}
+
+.pick-upDate input {
+    padding-left: 5px;
+    padding-top: 4px;
+    padding-right:- 70px;
+    width: 68%;
+    margin-right: 2px;
+
+}
+
+.carBookForm p{
+    text-align: center;
+}
+
+
+
+.btn{
+    padding: 14px;
+    width: 100%;
+    background-color: #feca33;
+    color: #fffefe;
+    border: none;
+    font-weight: bold;
+    font-size: medium;
+    box-shadow: 5px 5px  rgb(208, 207, 207);
+}
+
+.carBookForm button:hover{
+    background-color:  #706c6e;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .booking-form{
+        width: 400px;
+        height: 350px;
+        margin-left: 45px;
+        margin-right: -30px;
+    }
+    .image{
+        height: 380px;
+
+    }
+    #carImg{
+        width: 95%;
+        margin-top: 55px;
+        margin-right: -10px;
+    }
+  }
+
+
+  @media only screen and (max-width: 600px) {
+    .main-conatiner{  
+        flex-direction:column;
+        height: 100%;
+        background-color: #feca33;
+        padding-top: 150px;  
+    }
+    .booking-form{
+        width: 350px;
+        height: 350px;
+        margin-left: -4.9%;
+    }
+    .image{
+        width: 500px;
+        height: 300px;
+        padding: 20px;
+        margin-bottom: 50px;
+    }
+    
+  }
+
+  @media only screen and (max-width: 430px) {
+    .main-conatiner{  
+        padding-top: 150px;  
+    }
+    .booking-form{
+        width: 350px;
+        height: 350px;
+        margin-left: -4.9%;
+    }
+    .image{
+        width: 390px;
+        height: 300px;
+        padding: 20px;
+        margin-bottom: 50px;
+    }
+    
+  }

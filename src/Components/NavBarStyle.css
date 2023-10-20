@@ -1,0 +1,49 @@
+body{
+    font-size: x-large;
+}
+
+.Nav-Bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px;
+    align-items: center;
+    height: 15vh;
+    background-color:  #fffefe;
+    position: fixed;
+    width: 100%;
+    box-shadow: 0 0px 0px 0.3px gray;
+    
+}
+
+.Nav-Link a{
+    margin-left: 30px;
+}
+
+.Nav-Link a:hover{
+    padding: 10px;
+}
+
+.active{
+    border: 2px solid gray;
+    padding: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+    .Nav-Bar{
+        height: 10vh;
+    }
+    .Nav-Bar img{
+        width: 90%;
+    }
+    .Nav-Link a{
+        font-size: medium;
+    }
+
+    
+}
+
+@media only screen and (max-width: 430px) {
+    
+    
+  }

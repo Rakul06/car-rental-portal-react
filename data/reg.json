@@ -1,0 +1,22 @@
+{
+  "regDetails": [
+    {
+      "id": 1,
+      "name": "Rakul",
+      "age": "21",
+      "phone": "7558103907",
+      "email": "r@gmail.com",
+      "password": "Sivakamib@06",
+      "cpassword": "Sivakamib@06"
+    },
+    {
+      "name": "Rakul B",
+      "age": "22",
+      "phone": "9514490384",
+      "email": "rahulsk8223@gmail.com",
+      "password": "Sivakamib@06",
+      "cpassword": "Sivakamib@06",
+      "id": 2
+    }
+  ]
+}

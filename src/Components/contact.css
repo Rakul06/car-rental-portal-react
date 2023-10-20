@@ -1,0 +1,146 @@
+.main_cont_contact{
+    display: flex;
+    /* width: 100%; */
+    padding-top: 90px;
+    height: 100vh;
+
+    
+}
+
+.formContact{
+    padding: 35px;
+    height: 80%;
+    width: 60%;
+    margin-left: 1%;
+}
+
+.customerSupport{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.formContact h3{
+    font-weight: bolder;
+    font-size: larger;
+    margin-bottom: 30px;
+}
+
+.formContact p{
+    font-size: large;
+    padding-bottom: 5px;
+}
+
+.formContact span{
+    color: #feca33;
+    font-weight: bolder;
+}
+
+
+.name{
+    margin-bottom: 5px;
+}
+#fname{
+    height: 30px;
+    width: 48%;
+    margin-right: 4%;
+    background-color: #e1e0e1;
+    border: none;
+}
+
+#lname{
+    height: 30px;
+    width: 48%;
+    background-color: #e1e0e1;
+    border: none;
+}
+
+.phone_contact input{
+    height: 30px;
+    width: 100%;
+    background-color: #e1e0e1;
+    border: none;
+    margin-bottom: 5px;
+}
+
+.email_contact input{
+    height: 30px;
+    width: 100%;
+    background-color: #e1e0e1;
+    border: none;
+    margin-bottom: 10px;
+}
+
+.message textarea{
+    height:auto;
+    width: 100%;
+    background-color: #e1e0e1;
+    border: none;
+
+}
+
+.formContact ::placeholder{
+    font-size: medium;
+}
+
+.customer_center{
+    display: flex; 
+    height: auto;
+    width: 32.5vw;
+    background-color: #e1e0e1;
+    border-bottom: 5px solid #feca33;
+    margin-bottom: 20px;
+
+}
+
+
+.customerSupport #p1{
+    margin-top: 70px;
+    font-size: medium;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+.customerSupport img{
+    margin-top: 7px;
+    margin-left:10px;
+    width: 70px;
+    height: 70px;
+    margin-right: 20px;
+}
+
+.customer_center_details{
+    margin-top: 5px;
+    font-size:medium;
+    font-weight: bolder;
+}
+
+.span{
+    color: #feca33;
+    font-size:medium;
+    font-weight: bolder;
+
+}
+
+#p2{
+    font-size: medium;
+    font-weight: bolder;
+    margin-bottom: 10px;
+
+}
+
+.con_button{
+    background-color:#feca33;
+    border: none;
+    padding: 5px;
+    font-size: large;
+    color: white;
+    width:100px;
+    font-weight: bold;
+    box-shadow: 5px 5px  rgb(208, 207, 207);
+}
+
+@media only screen and (max-width: 600px){
+    .main_cont_contact{
+        padding-bottom: 600px;
+    }
+} 

@@ -1,0 +1,159 @@
+{
+    "carDetails":[
+        {
+            "id":1,
+            "brand":"Wolkshwagen",
+            "model":"VW Golf VII",
+            "img":"http://carrental.themeinjection.com/theme/img/vehicle1.jpg",
+            "seats":5,
+            "doors":4,
+            "aircondition":"Yes",
+            "transmission":"automatic",
+            "price":"$120",
+            "isBooked":false
+
+        },
+        {
+            "id":2,
+            "brand":"Audi",
+            "model":"Audi A1 S-Line",
+            "img":"http://carrental.themeinjection.com/theme/img/vehicle2.jpg",
+            "seats":5,
+            "doors":4,
+            "aircondition":"Yes",
+            "transmission":"automatic",
+            "price":"$120",
+            "isBooked":false
+            
+        },
+        {
+            "id":3,
+            "brand":"Toyato",
+            "model":"Toyato Camry",
+            "img":"http://carrental.themeinjection.com/theme/img/vehicle3.jpg",
+            "seats":5,
+            "doors":4,
+            "aircondition":"Yes",
+            "transmission":"automatic",
+            "price":"$120",
+            "isBooked":false
+            
+        },
+        {
+            "id":4,
+            "brand":"BMW",
+            "model":"BMW 320 ModerLine",
+            "img":"http://carrental.themeinjection.com/theme/img/vehicle4.jpg",
+            "seats":5,
+            "doors":4,
+            "aircondition":"Yes",
+            "transmission":"automatic",
+            "price":"$100",
+            "isBooked":false
+            
+        },
+        {
+            "id":5,
+            "brand":"Benz",
+            "model":"Benz GLK",
+            "img":"http://carrental.themeinjection.com/theme/img/vehicle5.jpg",
+            "seats":5,
+            "doors":4,
+            "aircondition":"Yes",
+            "transmission":"automatic",
+            "price":"$100",
+            "isBooked":false
+        },
+        {
+            "id":6,
+            "brand":"Wolkshwagen",
+            "model":"VW Passat cw ",
+            "img":"http://carrental.themeinjection.com/theme/img/vehicle6.jpg",
+            "seats":5,
+            "doors":4,
+            "aircondition":"Yes",
+            "transmission":"automatic",
+            "price":"$100",
+            "isBooked":false
+        },
+        {
+            "id":7,
+            "brand":"Wolkshwagen",
+            "model":"VW Golf VII 2",
+            "img":"http://carrental.themeinjection.com/theme/img/vehicle2.jpg",
+            "seats":5,
+            "doors":4,
+            "aircondition":"Yes",
+            "transmission":"automatic",
+            "price":"$120",
+            "isBooked":false
+
+        },
+        {
+            "id":8,
+            "brand":"Audi",
+            "model":"Audi A1 S-Line 2",
+            "img":"http://carrental.themeinjection.com/theme/img/vehicle2.jpg",
+            "seats":5,
+            "doors":4,
+            "aircondition":"Yes",
+            "transmission":"automatic",
+            "price":"$120",
+            "isBooked":false
+            
+        },
+        {
+            "id":9,
+            "brand":"Toyato",
+            "model":"Toyato Camry 2",
+            "img":"http://carrental.themeinjection.com/theme/img/vehicle3.jpg",
+            "seats":5,
+            "doors":4,
+            "aircondition":"Yes",
+            "transmission":"automatic",
+            "price":"$120",
+            "isBooked":false
+            
+        },
+        {
+            "id":10,
+            "brand":"BMW",
+            "model":"BMW 320 ModerLine 2",
+            "img":"http://carrental.themeinjection.com/theme/img/vehicle4.jpg",
+            "seats":5,
+            "doors":4,
+            "aircondition":"Yes",
+            "transmission":"automatic",
+            "price":"$100",
+            "isBooked":false
+            
+        },
+        {
+            "id":11,
+            "brand":"Benz",
+            "model":"Benz GLK 2",
+            "img":"http://carrental.themeinjection.com/theme/img/vehicle5.jpg",
+            "seats":5,
+            "doors":4,
+            "aircondition":"Yes",
+            "transmission":"automatic",
+            "price":"$100",
+            "isBooked":false
+        },
+        {
+            "id":12,
+            "brand":"Wolkshwagen",
+            "model":"VW Passat cw 2",
+            "img":"http://carrental.themeinjection.com/theme/img/vehicle6.jpg",
+            "seats":5,
+            "doors":4,
+            "aircondition":"Yes",
+            "transmission":"automatic",
+            "price":"$100",
+            "isBooked":false
+        }
+
+
+
+    ]
+}
