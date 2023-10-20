@@ -55,7 +55,7 @@ const Book = () => {
 
             <div id="center">
                 <div id="quote"><h2 style={{fontSize:"larger",color:" #706c6e",marginTop:"30px",marginBottom:"100px"}}>Vehicle Models-Our rental cars</h2></div>
-                <img  id="carImage" src={showCarDetails.img ==="" ?audi:showCarDetails.img} alt="" />
+                <img  id="carImage" src={audi} alt="" />
                 <p style={{marginLeft:"40%",marginTop:"5px"}} >{showCarDetails.model}</p>
             </div>
 
