@@ -48,55 +48,7 @@ const Login = ({setShowNav,setUserName}) => {
 
   let validateData=(event)=>{
     event.preventDefault();
-    loginValidation(userDetails,setError,regUsers,setLoginTF,loginTF,setShowNav,setCarBookingHome,setUserName,navigate);
-
-    // event.preventDefault();
-    // let uName=false,pass=false;
-    // // let uNameError=document.getElementById("userNameError");
-    // // let password=document.getElementById("passWordError");
-    //    let invalid=document.getElementById("invalid");
-
-    // let filterFromJson=regUsers.filter((obj)=>(
-    //   userDetails.userName===obj.email
-    // ))
-
-    // // userEnterdData.userName===""?uNameError.innerHTML="user email cannot be empty":uNameError.innerHTML="";
-    // // filterFromJson=="" && userEnterdData.passWord==""?password.innerText="password cannot be empty":password.innerText="";
-    // // filterFromJson==""?uName=false:uName=true;
-    // filterFromJson==""?invalid.innerHTML="No data found invalid login credentials...":invalid.innerHTML="";
-
-
-    // if(filterFromJson.length > 0){
-    //   if((filterFromJson[0].password)===(userDetails.passWord)){
-    //     pass=true;
-    //     password.innerText="";
-    //   }
-    //   else{
-    //     if(userDetails.passWord.length>0){
-    //       password.innerText="incorrect password";
-    //     }
-    //     else{
-    //       password.innerText="password cannot be empty"
-    //     }
-        
-    //   }
-    // }
-
-    // if(uName&&pass){
-    //   alert("Login Sucessfull !!!!")
-    //   navigate("/");
-    //   setShowNav(true);
-    //   setCarBookingHome((obj)=>{
-    //     return({...obj,login:true})
-    //   });
-    //   setUserName(filterFromJson[0].name);
-     
-    // }
-    // else{
-    //   console.log("failed")
-    // }
-   
-    
+    loginValidation(userDetails,setError,regUsers,setLoginTF,loginTF,setShowNav,setCarBookingHome,setUserName,navigate);  
   }
   return (
     <>
