@@ -47,7 +47,7 @@ const Home = () => {
             <form action="" className='carBookForm' onSubmit={(event)=>{
                 handleSubmit(event)
               }}>
-              <select required name="carType" id="displayCars" value={carBookingHome.carType} onChange={handleChange}>
+              <select  name="carType" id="displayCars" value={carBookingHome.carType} onChange={handleChange}>
                 <option value="">Select your car type</option>
                 {
                   carDetails.length>0 && carDetails.map((carD)=>(
@@ -59,16 +59,16 @@ const Home = () => {
               </select>
               <div className='pick-upLocation'>
                   <label htmlFor="">Location</label>
-                  <input required type="text" name='location' value={carBookingHome.location||""} placeholder='Enter city' onChange={handleChange}/>
+                  <input  type="text" name='location' value={carBookingHome.location||""} placeholder='Enter city' onChange={handleChange}/>
               </div>
               <div className='pick-upDate'>
                 <label htmlFor="">Pick-up</label>
-                <input required min={current_date} type="date" name='pickup' value={carBookingHome.pickup ||""} onChange={handleChange} />
+                <input  min={current_date} type="date" name='pickup' value={carBookingHome.pickup ||""} onChange={handleChange} />
                 
               </div>
               <div style={{marginBottom:"30px"}} className='pick-upDate'>
                 <label style={{paddingRight:"49px"}} htmlFor="">Drop</label>
-                <input required min={current_date} type="date" name='drop' value={carBookingHome.drop || ""} onChange={handleChange} />
+                <input  min={current_date} type="date" name='drop' value={carBookingHome.drop || ""} onChange={handleChange} />
                 
               </div>
               <p><button className="btn" type='submit'>CONTINUE CAR RESERVATION</button></p>
