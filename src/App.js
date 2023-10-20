@@ -20,9 +20,11 @@ export const fecthDetails = async(url,setFn) =>
 function App() {
 
   const [carDetails,setCarDetails]=useState([]);
+    const [dummyData,setDummyData]=useState([]);
   
   useEffect(()=>
     {
+        fecthDetails("https://jsonplaceholder.typicode.com/comments",setDummyData);
       fecthDetails("https://testdata-9o57.onrender.com/carDetails",setCarDetails); 
     },[])
 
