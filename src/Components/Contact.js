@@ -1,10 +1,44 @@
 import React from 'react'
 import './contact.css'
+import { useState } from 'react'
+import {contactValidation} from '../AdditionalFunctions/contactValidation'
 
 const Contact = () => {
-  const handleContact=()=>{
-    alert("Message Send SucessFully")
+
+  const [contactData,setContactData]=useState({
+    fname:"",
+    lname:"",
+    phone:"",
+    email:"",
+    message:""
+  });
+
+  const [errorContactData,setErrorContactData]=useState({
+    errFName:"",
+    errLName:"",
+    errPhone:"",
+    errMail:"",
+    errMessage:""
+  })
+
+
+  const handleData=(event)=>{
+    let name=event.target.name;
+    let value=event.target.value;
+    setContactData((obj)=>{
+      return{
+        ...obj,
+        [name]:value
+      }
+    })
+
   }
+
+  const handleContact=(event)=>{
+    event.preventDefault();
+    contactValidation(contactData,setContactData,setErrorContactData);
+  }
+
   return (
     <div className='main_cont_contact'>
       <div className='formContact'>
@@ -13,17 +47,24 @@ const Contact = () => {
           <p style={{fontWeight:"bold",fontSize:"small",marginBottom:"20px"}}><span>Address:</span> Car|Rental / 38-2 Madurai / TamilNadu, India 625016</p>
         <form onSubmit={(event)=> handleContact(event)}>
           <div className='name'>
-            <input id='fname' type="text" placeholder='Fisrt Name :' />
-            <input  id="lname" type="text" placeholder='Last Name :' />
+            <input onChange={(event)=>{handleData(event)}} value={contactData.fname} name='fname' id='fname' type="text" placeholder='Fisrt Name :' />  
+            <input onChange={(event)=>{handleData(event)}} value={contactData.lname} name='lname' id="lname" type="text" placeholder='Last Name :' />
+          </div>
+          <div>
+            <span >{errorContactData.errFName || ""}</span>
+            <span style={{marginLeft:'126px'}}>{errorContactData.errLName || ""}</span>
           </div>
           <div className='phone_contact'>
-            <input type="text" placeholder='Phone Number :' />
+            <input onChange={(event)=>{handleData(event)}} value={contactData.phone} name='phone' type="text" placeholder='Phone Number :' />
+            <span>{errorContactData.errPhone || ""}</span>
           </div>
           <div className='email_contact'>
-            <input type="text" placeholder='Email :' />
+            <input onChange={(event)=>{handleData(event)}} value={contactData.email} name='email' type="text" placeholder='Email :' />
+            <span>{errorContactData.errMail || ""}</span>
           </div>
           <div className='message'>
-            <textarea name="" placeholder='Message :' id="" cols="30" rows="10">Message :</textarea>
+            <textarea onChange={(event)=>{handleData(event)}} value={contactData.message} name="message" placeholder='Message :' id="" cols="30" rows="10">Message :</textarea>
+            <span>{errorContactData.errMessage}</span>
           </div>
           <button className='con_button'>Submit</button>
         </form>
