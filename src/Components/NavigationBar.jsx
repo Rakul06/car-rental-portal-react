@@ -37,7 +37,10 @@ const NavigationBar = () => {
                                 setShow(true);
                                 setUserName("");
                                 setCarBookingHome((obj)=>{
-                                    return ({...obj,login:false})
+                                    return ({...obj,login:false,carType:"",
+                                        location:"",
+                                        pickup:"",
+                                        drop:"",})
                                 })
 
                             }
