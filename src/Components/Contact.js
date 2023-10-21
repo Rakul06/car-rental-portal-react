@@ -2,13 +2,16 @@ import React from 'react'
 import './contact.css'
 
 const Contact = () => {
+  const handleContact=()=>{
+    alert("Message Send SucessFully")
+  }
   return (
     <div className='main_cont_contact'>
       <div className='formContact'>
       <h3>Contact us</h3>
           <p>You have any questions or need additional information?</p>
           <p style={{fontWeight:"bold",fontSize:"small",marginBottom:"20px"}}><span>Address:</span> Car|Rental / 38-2 Madurai / TamilNadu, India 625016</p>
-        <form action="">
+        <form onSubmit={(event)=> handleContact(event)}>
           <div className='name'>
             <input id='fname' type="text" placeholder='Fisrt Name :' />
             <input  id="lname" type="text" placeholder='Last Name :' />
