@@ -3,7 +3,7 @@
     /* width: 100%; */
     padding-top: 90px;
     height: 100vh;
-
+    margin-bottom: 200px;
     
 }
 
@@ -144,3 +144,11 @@
         padding-bottom: 600px;
     }
 } 
+
+.formContact form span{
+    color: red;
+    margin-left: 1px;
+    font-weight: normal;
+    font-size: small;
+    
+}
