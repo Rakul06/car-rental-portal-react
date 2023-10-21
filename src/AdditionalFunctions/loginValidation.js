@@ -2,9 +2,12 @@ export const loginValidation=(userDetails,setError,regUsers,setLoginTF,loginTF,s
 
     let invalid=document.getElementById("invalid");
     
+    
     let filterFromJson=regUsers.filter((obj)=>(
         userDetails.userName===obj.email
     ))
+
+    
 
     let regex = new RegExp('[a-z0-9]+@[a-z]+\.[a-z]{2,3}');
     
@@ -17,10 +20,25 @@ export const loginValidation=(userDetails,setError,regUsers,setLoginTF,loginTF,s
         setLoginTF((obj)=>{return{...obj,mailErrorTF:false}})
     }
     else{
-        setError((obj)=> {return{...obj,mailError:""}})
-        setLoginTF((obj)=>{return{...obj,mailErrorTF:true}})
-        filterFromJson==""?invalid.innerHTML="No data found invalid login credentials...":invalid.innerHTML="";
-        
+        if(regUsers.length > 0){
+            console.log("working from regg")
+            setError((obj)=> {return{...obj,mailError:""}})
+            if(filterFromJson.length > 0){
+                invalid.innerHTML="";
+                setLoginTF((obj)=>{return{...obj,mailErrorTF:true}})
+            }
+            else{
+                
+                invalid.innerHTML="No data found invalid login credentials...";
+                setLoginTF((obj)=>{return{...obj,mailErrorTF:false}})
+                
+            }
+        }
+        else{
+            setError((obj)=> {return{...obj,mailError:""}})
+            setLoginTF((obj)=>{return{...obj,mailErrorTF:true}})
+        }
+           
     }
 
     if(userDetails.passWord.trim().length < 1){
@@ -29,7 +47,7 @@ export const loginValidation=(userDetails,setError,regUsers,setLoginTF,loginTF,s
     }
     else{
         setError((obj)=> {return{...obj,passError:""}})
-        if(filterFromJson.length > 0){
+        if(filterFromJson.length > 0 && regUsers.length > 0){
             if((filterFromJson[0].password)===(userDetails.passWord)){
                 setLoginTF((obj)=>{return{...obj,passErrorTF:true}})
                 setError((obj)=> {return{...obj,passError:""}})
@@ -38,6 +56,10 @@ export const loginValidation=(userDetails,setError,regUsers,setLoginTF,loginTF,s
                 setLoginTF((obj)=>{return{...obj,passErrorTF:false}})
                 setError((obj)=> {return{...obj,passError:"incorrect password..."}})
             }
+        }
+        else{
+            setLoginTF((obj)=>{return{...obj,passErrorTF:true}})
+            setError((obj)=> {return{...obj,passError:""}})
         }
     }
 
@@ -48,7 +70,7 @@ export const loginValidation=(userDetails,setError,regUsers,setLoginTF,loginTF,s
         setCarBookingHome((obj)=>{
             return({...obj,login:true})
         });
-        setUserName(filterFromJson[0].name);
+        regUsers.length > 0 ? setUserName(filterFromJson[0].name): setUserName(userDetails.userName)
     }
     else{
         console.log("failed")
