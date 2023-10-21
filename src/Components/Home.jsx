@@ -3,12 +3,13 @@ import './Home.css';
 import car from '../img/Benz.png'
 import { useNavigate } from 'react-router-dom';
 import {UserContextFromApp} from '../App'
-import {UserContextFromDisp} from '../Components/DisplayComponent'
+import {UserContextFromDisp} from './DisplayComponent'
 import CustomerService from './CustomerService';
 import Book from './Book';
 import CustomerReview from './CustomerReview';
 import Partners from './Partners';
 import Contact from './Contact';
+import {homeValidation} from "../AdditionalFunctions/homeValidation"
 
 
 
@@ -19,6 +20,13 @@ const Home = () => {
   const navigate=useNavigate();
   let date = new Date();
 	let current_date = date.getFullYear()+"-"+(date.getMonth()+1)+"-"+ date.getDate();
+
+  const [homeErrMssg,setHomeErrMssg]=useState({
+    select:"",
+    location:"",
+    pickup:"",
+    drop:""
+  })
 
   const handleChange=(event)=>{
     let name=event.target.name;
@@ -33,8 +41,16 @@ const Home = () => {
   const handleSubmit=(event)=>{
     event.preventDefault();
     console.log(document.getElementById("displayCars"))
-    carBookingHome.login===true ?navigate("/Bookcar"):
-    document.getElementById("errorMssgBooking").innerHTML="please login to continue";
+    if(carBookingHome.login===true){
+      const otherDetails=homeValidation(carBookingHome,setHomeErrMssg);
+      if(otherDetails===true){
+        navigate("/Bookcar")
+      }
+    }
+    else{
+      document.getElementById("errorMssgBooking").innerHTML="please login to continue";
+    }
+    
   }
 
   return (
@@ -57,18 +73,23 @@ const Home = () => {
                   ))
                   }
               </select>
+              <span className='homeErrMssg'>{homeErrMssg.select}</span>
+              
               <div className='pick-upLocation'>
                   <label htmlFor="">Location</label>
                   <input  type="text" name='location' value={carBookingHome.location||""} placeholder='Enter city' onChange={handleChange}/>
+                  <span className='homeErrMssg' >{homeErrMssg.location}</span>
               </div>
               <div className='pick-upDate'>
                 <label htmlFor="">Pick-up</label>
                 <input  min={current_date} type="date" name='pickup' value={carBookingHome.pickup ||""} onChange={handleChange} />
+                <span className='homeErrMssg'>{homeErrMssg.pickup}</span>
                 
               </div>
               <div style={{marginBottom:"30px"}} className='pick-upDate'>
                 <label style={{paddingRight:"49px"}} htmlFor="">Drop</label>
                 <input  min={current_date} type="date" name='drop' value={carBookingHome.drop || ""} onChange={handleChange} />
+                <span className='homeErrMssg'>{homeErrMssg.drop}</span>
                 
               </div>
               <p><button className="btn" type='submit'>CONTINUE CAR RESERVATION</button></p>
@@ -86,8 +107,8 @@ const Home = () => {
             
           </div>
         </div>
+
         <CustomerService/>
-       
         <CustomerReview/>
         <Partners/>
         <Contact/> 
