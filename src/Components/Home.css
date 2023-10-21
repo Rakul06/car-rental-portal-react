@@ -113,7 +113,12 @@
     background-color:  #706c6e;
 }
 
-
+.homeErrMssg{
+    margin-top: 2px;
+    font-size: small;
+    margin-left: 1px;
+    font-weight: normal;
+}
 @media only screen and (max-width: 1000px) {
     .booking-form{
         width: 400px;
