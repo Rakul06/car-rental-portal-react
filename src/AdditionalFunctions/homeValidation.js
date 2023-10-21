@@ -25,7 +25,7 @@ export const homeValidation=(carBookingHome,setHomeErrMssg)=>{
             pickupTF=true;
         }
         if(carBookingHome.drop===""){
-            setHomeErrMssg((obj)=> { return {...obj,drop:"please enter your location"}})
+            setHomeErrMssg((obj)=> { return {...obj,drop:"please enter your date"}})
         }
         else{
             setHomeErrMssg((obj)=> { return {...obj,drop:""}})
