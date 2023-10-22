@@ -56,3 +56,9 @@
         
     }
 }
+@media only screen and (max-width: 480px){
+    .custReview{
+        width: 120vw;
+    }
+    
+}
