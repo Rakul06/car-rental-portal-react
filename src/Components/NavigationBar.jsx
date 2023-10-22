@@ -8,10 +8,10 @@ import Login from './Login';
 import Contact from './Contact';
 import BookingForm from './BookingForm';
 import RegisterPage from './RegisterPage';
-import {UserContextFromDisp} from '../Components/DisplayComponent'
+import {UserContextFromDisp} from './DisplayComponent'
 
 const NavigationBar = () => {
-    const {setCarBookingHome}= useContext(UserContextFromDisp);
+    const {setCarBookingHome,setErrorContactData,setHomeErrMssg}= useContext(UserContextFromDisp);
     const [show,setShow]=useState(true);
     const [userName,setUserName]=useState("");
     let userNameCopy="";
@@ -33,17 +33,56 @@ const NavigationBar = () => {
                             <NavLink onClick={()=>setShow(true)}to="/">Home</NavLink>
                             <NavLink onClick={()=>setShow(true)}to="/Models">Car Models</NavLink>
                             <NavLink onClick={()=>setShow(true)} to="/Contact">Contact</NavLink>
-                            {userName===""?<NavLink onClick={()=>setShow(!show)} to="Login">Login</NavLink>:<Link onClick={()=>{
-                                setShow(true);
-                                setUserName("");
-                                setCarBookingHome((obj)=>{
-                                    return ({...obj,login:false,carType:"",
-                                        location:"",
-                                        pickup:"",
-                                        drop:"",})
-                                })
+                            {userName===""?<NavLink onClick={
+                                ()=>{
+                                    setShow(!show)
+                                    setErrorContactData((obj=>{
+                                        return ({
+                                            ...obj,
+                                            errFName:"",
+                                            errLName:"",
+                                            errPhone:"",
+                                            errMail:"",
+                                            errMessage:""
+                                        })
+                                    }))
+                                }
+                                 
+                            } to="Login">Login</NavLink>
+                            :<Link onClick={()=>
+                                {
+                                    setShow(true);
+                                    setUserName("");
+                                    setCarBookingHome((obj)=>{
+                                        return ({...obj,
+                                            carType:"",
+                                            location:"",
+                                            pickup:"",
+                                            drop:"",
+                                            login:false
+                                        })
+                                    })
+                                    setErrorContactData((obj=>{
+                                        return ({
+                                            ...obj,
+                                            errFName:"",
+                                            errLName:"",
+                                            errPhone:"",
+                                            errMail:"",
+                                            errMessage:""
+                                        })
+                                    }))
+                                    setHomeErrMssg((obj)=>{
+                                        return ({
+                                            ...obj,
+                                            select:"",
+                                            location:"",
+                                            pickup:"",
+                                            drop:""
+                                        })
+                                    })
 
-                            }
+                                }
                             } to="">Logout</Link>
                             }
                         </div>
