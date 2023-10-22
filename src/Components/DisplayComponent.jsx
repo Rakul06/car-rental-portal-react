@@ -25,10 +25,33 @@ const [regDetails,setRegDetails]=useState({
   password:"",
   cpassword:""
 })
+
+const [homeErrMssg,setHomeErrMssg]=useState({
+  select:"",
+  location:"",
+  pickup:"",
+  drop:""
+})
+
+const [contactData,setContactData]=useState({
+  fname:"",
+  lname:"",
+  phone:"",
+  email:"",
+  message:""
+});
+
+const [errorContactData,setErrorContactData]=useState({
+  errFName:"",
+  errLName:"",
+  errPhone:"",
+  errMail:"",
+  errMessage:""
+})
  
   return (
     <div>
-      <UserContextFromDisp.Provider value={{carBookingHome,setCarBookingHome,regDetails,setRegDetails}} >
+      <UserContextFromDisp.Provider value={{carBookingHome,setCarBookingHome,regDetails,setRegDetails,homeErrMssg,setHomeErrMssg,errorContactData,setErrorContactData,contactData,setContactData}} >
           <NavigationBar/>
           <Footer/>
       </UserContextFromDisp.Provider>
