@@ -70,7 +70,9 @@ export const loginValidation=(userDetails,setError,regUsers,setLoginTF,loginTF,s
         setCarBookingHome((obj)=>{
             return({...obj,login:true})
         });
-        regUsers.length > 0 ? setUserName(filterFromJson[0].name): setUserName(userDetails.userName)
+        let text = userDetails.userName;
+        const myArray = text.split("@");
+        regUsers.length > 0 ? setUserName(filterFromJson[0].name): setUserName(myArray[0])
     }
     else{
         console.log("failed")
