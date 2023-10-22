@@ -85,23 +85,41 @@ form span{
 
 
 
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 785px){
     .main-container{
-        height: 130vh;
-        width: 90vw;
+        height: 150vh;
+        width: 100vw;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
-    .image{
-        margin-top: 20%;
-    }
+    
     .form form{
-        margin-left: 20%;
-        height: 450px;
+        margin-left: 0%;
+        height: 500px;
         width: 60vw;
         margin-top: 10%;
+        margin-bottom: 10px;
     }
     .image img{
         width: 100%;
     }
     
+}
+
+@media only screen and (max-width: 480px){
+    .main-container{
+        width: 120vw;
+    }
+    .form form{
+        margin-left: 0%;
+        height: 500px;
+        width: 90vw;
+        margin-top: 10%;
+        margin-bottom: 10px;
+    }
+    .image img{
+        width: 140%;
+        margin-left: -90px;
+    }
 }
