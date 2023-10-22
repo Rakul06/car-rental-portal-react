@@ -16,17 +16,11 @@ import {homeValidation} from "../AdditionalFunctions/homeValidation"
 const Home = () => {
   const {carDetails}=useContext(UserContextFromApp);
   console.log(carDetails , "from home js")
-  const {carBookingHome,setCarBookingHome}=useContext(UserContextFromDisp);
+  const {carBookingHome,setCarBookingHome,homeErrMssg,setHomeErrMssg}=useContext(UserContextFromDisp);
+
   const navigate=useNavigate();
   let date = new Date();
 	let current_date = date.getFullYear()+"-"+(date.getMonth()+1)+"-"+ date.getDate();
-
-  const [homeErrMssg,setHomeErrMssg]=useState({
-    select:"",
-    location:"",
-    pickup:"",
-    drop:""
-  })
 
   const handleChange=(event)=>{
     let name=event.target.name;
