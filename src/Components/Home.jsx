@@ -1,15 +1,16 @@
 import React, { useContext, useEffect,useState } from 'react';
 import './Home.css';
 import car from '../img/Benz.png'
+import bmw from '../img/BMW.png'
 import { useNavigate } from 'react-router-dom';
 import {UserContextFromApp} from '../App'
 import {UserContextFromDisp} from './DisplayComponent'
 import CustomerService from './CustomerService';
-import Book from './Book';
 import CustomerReview from './CustomerReview';
 import Partners from './Partners';
 import Contact from './Contact';
 import {homeValidation} from "../AdditionalFunctions/homeValidation"
+import {carSlides} from '../AdditionalFunctions/slide'
 
 
 
@@ -30,6 +31,10 @@ const Home = () => {
     })
     console.log(carBookingHome)
   }  
+
+  useEffect(()=>{
+    carSlides();
+  },[])
 
 
   const handleSubmit=(event)=>{
@@ -97,6 +102,16 @@ const Home = () => {
             </div>
             <div>
             <img id="carImg" src={car} alt="" />
+            </div>
+            
+          </div>
+          <div className='image'>
+            <div className='Text'>
+              <b>LUXURY CAR FROM RS.5000 PER DAY</b>
+              <p style={{color:"white"}}>Treat yourself in INDIA</p>
+            </div>
+            <div>
+            <img id="carImg2" src={bmw} alt="" />
             </div>
             
           </div>
