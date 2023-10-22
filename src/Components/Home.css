@@ -119,6 +119,12 @@
     margin-left: 1px;
     font-weight: normal;
 }
+
+#carImg2{
+    width: 94%;
+    height: 70%;
+
+}
 @media only screen and (max-width: 1000px) {
     .booking-form{
         width: 400px;
