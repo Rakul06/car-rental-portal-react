@@ -35,3 +35,17 @@
     width: 100px;
     height: 100px;
 }
+
+@media only screen and (max-width: 480px){
+    .main_cont_partner{
+        width: 120vw;
+    }
+    .main_cont_partner p{
+        text-align: center;
+    }
+
+    .partners img{
+        width: 75px;
+        height: 75px;
+    }
+}
