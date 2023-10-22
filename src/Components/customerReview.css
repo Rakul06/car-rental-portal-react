@@ -38,3 +38,12 @@
   .activeDot {
     background-color: #717171;
   }
+
+ 
+    
+  @media only screen and (max-width: 480px){
+    .main_cont_rev{
+      width: 120vw;
+    }
+
+  }
