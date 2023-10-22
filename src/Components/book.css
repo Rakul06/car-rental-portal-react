@@ -1,5 +1,4 @@
 #main-area{
-   
     display: flex;
     justify-content: center;
     align-items: center;
@@ -80,4 +79,37 @@ table button{
         padding-bottom: 600px;
     }
    
+}
+
+@media only screen and (max-width: 785px){
+    #main-area{
+        flex-direction: column;
+        height: 200vh;
+    }
+    #example{
+        height: 350px;
+        width: 400px;
+        margin-bottom: 50px;
+        margin-left: 0px;
+    }
+    #carImage{
+        margin-left: 0px;
+        margin-right: 0px;
+        width: 500px;
+        
+    }
+    table{
+        width: 400px;
+        height: 350px;
+        margin-right: 0px;
+    }
+    #quote{
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    #main-area{
+        width: 120vw;
+    }
 }
