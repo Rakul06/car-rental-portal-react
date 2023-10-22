@@ -20,3 +20,20 @@
         }
         
       }
+
+      let carSlidesIndex=0;
+      export function carSlides(){
+        let i;
+        let slides=document.getElementsByClassName("image");
+        if(slides.length>0 ){
+            for (i=0;i<slides.length;i++) {
+                slides[i].style.display="none";  
+              }
+              carSlidesIndex++;
+              if (carSlidesIndex>slides.length) 
+              {carSlidesIndex = 1}    
+              slides[carSlidesIndex-1].style.display="block";  
+              setTimeout(carSlides,2000); 
+        }
+        
+      }
