@@ -144,7 +144,7 @@
   }
 
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 785px) {
     .main-conatiner{  
         flex-direction:column;
         height: 100%;
@@ -152,33 +152,41 @@
         padding-top: 150px;  
     }
     .booking-form{
-        width: 350px;
-        height: 350px;
+        width: 430px;
+        height: 380px;
         margin-left: -4.9%;
     }
     .image{
-        width: 500px;
+        width: 550px;
         height: 300px;
         padding: 20px;
-        margin-bottom: 50px;
+        margin-top: -50px;
+        margin-bottom: 100px;
     }
     
   }
 
-  @media only screen and (max-width: 430px) {
+  @media only screen and (max-width: 480px) {
     .main-conatiner{  
         padding-top: 150px;  
+        width: 120vw;
     }
     .booking-form{
         width: 350px;
         height: 350px;
-        margin-left: -4.9%;
+       
     }
     .image{
         width: 390px;
         height: 300px;
         padding: 20px;
         margin-bottom: 50px;
+    }
+    #carImg2{
+        margin-left: 5px;
+    }
+    #carImg{
+        margin-left: 5px;
     }
     
   }
