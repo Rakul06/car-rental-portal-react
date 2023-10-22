@@ -1,26 +1,12 @@
 import React from 'react'
 import './contact.css'
-import { useState } from 'react'
+import {useContext } from 'react'
 import {contactValidation} from '../AdditionalFunctions/contactValidation'
+import {UserContextFromDisp} from './DisplayComponent'
 
 const Contact = () => {
 
-  const [contactData,setContactData]=useState({
-    fname:"",
-    lname:"",
-    phone:"",
-    email:"",
-    message:""
-  });
-
-  const [errorContactData,setErrorContactData]=useState({
-    errFName:"",
-    errLName:"",
-    errPhone:"",
-    errMail:"",
-    errMessage:""
-  })
-
+  const {contactData,setContactData,errorContactData,setErrorContactData}=useContext(UserContextFromDisp);
 
   const handleData=(event)=>{
     let name=event.target.name;
