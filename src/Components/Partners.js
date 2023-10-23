@@ -10,16 +10,16 @@ const Partners = () => {
         </p>
         <div className='partners'>
             <div>
-                <img src="https://cdn.iconscout.com/icon/free/png-512/free-mercedes-8-202855.png?f=webp&w=512" alt="" />
+                <img alt="benz logo" src="https://cdn.iconscout.com/icon/free/png-512/free-mercedes-8-202855.png?f=webp&w=512" alt="" />
             </div>
             <div>
-                <img src="https://cdn.iconscout.com/icon/free/png-512/free-bmw-4-202746.png?f=webp&w=512" alt="" />
+                <img alt="bmw logo" src="https://cdn.iconscout.com/icon/free/png-512/free-bmw-4-202746.png?f=webp&w=512" alt="" />
             </div>
             <div>
-                <img style={{height:"150px",width:"150px",marginTop:"-25px"}} src="https://cdn.iconscout.com/icon/free/png-512/free-audi-6-282743.png?f=webp&w=512" alt="" />
+                <img alt="audi logo" style={{height:"150px",width:"150px",marginTop:"-25px"}} src="https://cdn.iconscout.com/icon/free/png-512/free-audi-6-282743.png?f=webp&w=512" alt="" />
             </div>
             <div>
-                <img src="https://cdn.iconscout.com/icon/free/png-512/free-volkswagen-51-202922.png?f=webp&w=512" alt="" />
+                <img alt="volkwagan logo" src="https://cdn.iconscout.com/icon/free/png-512/free-volkswagen-51-202922.png?f=webp&w=512" alt="" />
             </div>
             <div>
                 <img style={{height:"120px",width:"120px",marginTop:"-12px"}} src="https://cdn.iconscout.com/icon/free/png-512/free-toyota-1-202914.png?f=webp&w=512" alt="" />
